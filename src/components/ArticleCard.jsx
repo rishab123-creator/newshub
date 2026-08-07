@@ -20,7 +20,7 @@ export default function ArticleCard({ article }) {
             {
                 article.urlToImage
                     ? <img className=" w-full h-52 sm:h-56 lg:h-48 object-cover"
-                        src={article.urlToImage}
+                        src={article.image}
                         alt={article.title} />
                     : <div className="w-full h-52 sm:h-56 lg:h-48 flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-700">
                         <span className="text-5xl">📰</span>
