@@ -8,7 +8,7 @@ import { BookmarkProvider } from './context/BookmarkContext.jsx'
 import { Toaster } from "react-hot-toast";
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  
     <BrowserRouter>
       <ThemeProvieder>
         <BookmarkProvider>
@@ -17,5 +17,5 @@ createRoot(document.getElementById('root')).render(
         </BookmarkProvider>
       </ThemeProvieder>
     </BrowserRouter>
-  </StrictMode>,
+  
 )
