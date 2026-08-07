@@ -1,4 +1,4 @@
-const API_KEY = import.meta.env.VITE_GNEWS_API_KEY;
+const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
 
 export async function getNews(category) {
