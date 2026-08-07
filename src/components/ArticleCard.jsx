@@ -18,7 +18,7 @@ export default function ArticleCard({ article }) {
         hover:shadow-2xl hover:scale-105 hover:-translate-y-2
         transition-all duration-300 ease-in-out`} >
             {
-                article.urlToImage
+                article.image
                     ? <img className=" w-full h-52 sm:h-56 lg:h-48 object-cover"
                         src={article.image}
                         alt={article.title} />
