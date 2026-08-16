@@ -32,7 +32,7 @@ export default function NewsPage({ category, search }) {
     });
 
 
-    
+
 
 
 
@@ -47,7 +47,8 @@ export default function NewsPage({ category, search }) {
 
     if (error) {
         return (
-            <div className={`${bg} ${text} min-h-screen flex flex-col items-center justify-center gap-4`}>
+            <div className={`${bg} ${text} min-h-screen 
+            flex flex-col items-center justify-center gap-4`}>
                 <h2 className="text-2xl font-bold text-red-500">
                     ⚠️ Failed to load news
                 </h2>
@@ -56,7 +57,8 @@ export default function NewsPage({ category, search }) {
 
                 <button
                     onClick={fetchNews}
-                    className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                    className="px-5 py-2 bg-blue-600 
+                    text-white rounded-lg hover:bg-blue-700"
                 >
                     Retry
                 </button>
@@ -66,7 +68,9 @@ export default function NewsPage({ category, search }) {
 
     if (filteredArticles.length == 0) {
         return (
-            <div className={`${bg} ${text} min-h-screen flex flex-col min-h-screen justify-center items-center text-center`}>
+            <div className={`${bg} ${text} min-h-screen 
+            flex flex-col min-h-screen justify-center
+             items-center text-center`}>
                 <h2 className="text-xl font-semibold">No Articles Found</h2>
                 <h2 className="text-gray-500 mt-2">Try another Keyword</h2>
             </div>
@@ -75,19 +79,21 @@ export default function NewsPage({ category, search }) {
     }
 
     return (
-        <div className={`${bg} ${text} min-h-screen max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8 py-6`}>
-            <div className=" grid grid-cols-1  
-        md:grid-cols-2 lg:grid-cols-3
-        gap-6 
-        ">
-                {
-                    filteredArticles.map((article) => (
+        <div className={`${bg} ${text} min-h-screen`}>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredArticles.map((article) => (
                         <ArticleCard
                             key={article.url}
-                            article={article} />
-                    ))
-                }
+                            article={article}
+                        />
+                    ))}
+                </div>
+
             </div>
+
         </div>
 
     )
